@@ -1,108 +1,241 @@
-html, body {
-  height: 100%;
-  width: 100%;
-}
-
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
 }
 
 body {
-    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fff;
 }
 
-header {
+.topo {
+    position: fixed;
+    background-color: #00cad1;
     width: 100%;
-    height: 55px;
-    background-color: royalblue;
-    padding: 18px 0 0 5px;
+    z-index: 900;
 }
 
-span {
-    text-transform: uppercase;
-    color: aliceblue;
-    padding: 5px;
-    border: solid 2px tomato;
-    border-radius: 15px 5px;
+.container {
+    display: flex;
+    max-width: 1024px;
+    margin: 0 auto;
 }
 
-h1 {
-    margin: 20px 0;
-    letter-spacing: 2px;
-    font-weight: bold;
+.topo, .container {
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 60px;
+    padding: 0 10px;
+    margin: 0 auto;
 }
 
-p {
-    margin-bottom: 10px;
-    font-weight: 400;
+.topo-titulo {
+    font-weight: 600;
+    font-size: 28px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topo-titulo a {
+    display: flex;
+}
+
+.topo-logo {
+    height: 60px;
+}
+
+.topo-links {
+    display: flex;
+}
+
+.topo-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.topo-links a:hover {
+    cursor: pointer;
+    color: #004b4c;
 }
 
 main {
-    max-width: 800px;
-    height: 500px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    color: #00008c;
+    margin-bottom: 60px;
 }
 
-form {
+.box-visiao-geral {
     width: 100%;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff;
-    box-shadow: 0 8px 6px -6px black;
-}
-
-label {
-    letter-spacing: 1px;
-    font-size: 15px;
-}
-
-.categoria {
-    margin-top: 5px;
-}
-
-.categoria .titulo-categoria {
-    display: flex;
-    padding: 15px 0;
-    font-size: 23px;
-    font-weight: 300;
-}
-
-button {
-    width: 410px;
-    height: 40px;
+    height: 91vh;
     position: relative;
-    margin-top: 25px;
-    padding: 8px;
-    border: none;
-    border-radius: 15px;
-    background-color: royalblue;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    cursor: pointer;
+    background-image: url(assets/recepcao.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-footer {
-    background-color: royalblue;
+.box-visao-geral-titulo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    color: #fff;
+    position: relative;
+    /* left: 25%; */
+}
+
+.box-visiao-geral h1 {
+    display: flex;
+    font-size: 38px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 5px;
+    border: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+}
+
+.box-visiao-geral h1:hover {
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 5px;
+    border: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    transition: .3s ease-in-out 3s;
+}
+
+.container-conteudo {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-conteudo h2, .container-conteudo h3 {
+    margin:0;
+    margin: 25px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#sobre, #especialidades, #contato {
+    /* padding: 40px 20px 0; */
+} 
+
+.secao-sobre, #especialidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box-sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.box-sobre img {
+    height: 250px;
+}
+
+.box-sobre h3 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.box-especialidades {
+    width: 80%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+}
+
+.box-especialidade {
+    width: 80%;
+    margin: 15px;
+    box-shadow: 5px 10px 18px #888888;
+    /* box-shadow: 0px 1px 10px rgb(0, 0, 0 / 50%); */
+    border-radius: 3px;
+    width: calc(100% / 3 - 40px);
+}
+
+.box-especialidade img {
     width: 100%;
-    height: 6vh;
-    margin-top: 25px;
+}
+
+.box-especialidade:hover {
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 5px 10px 18px #4e4b4b;
+}
+
+.box-especialidade figcaption {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.box-especialidade h4 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* #especialidades {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+.box-link-horarios {
     display: flex;
     text-align: center;
-    justify-content: center;
+    margin-top: 20px;
 }
 
-.rodape {
-    margin-top: 23px;
-    padding-top: 12px;
+.link-horarios {
+    background-color: #00cad1;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 5px 10px 18px #888888;
+}
+
+.link-horarios:hover {
+    cursor: pointer;
+    transition: .3s;
+    box-shadow: 5px 10px 18px #4e4b4b;
+}
+
+/* Contato */
+.secao-contato {
+    width: 100%;
+    padding: 0 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Ínicio rodapé */
+
+footer {
+    background-color: #0d6e71;
     color: #fff;
+    padding: 10px;
+}
+
+footer, .container {
+    text-align: center;
 }
